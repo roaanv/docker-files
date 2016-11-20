@@ -6,10 +6,7 @@
 #
 
 # Pull base image.
-FROM rvos-ubuntu1604
-
-# Update repo
-RUN apt-get update
+FROM roaanv/ubuntu1604-dev
 
 # Install Java.
 RUN \
