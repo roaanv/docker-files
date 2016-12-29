@@ -1,5 +1,7 @@
 # Pull base image.
-FROM roaanv/ubuntu1604-dev
+FROM roaanv/ubuntu-dev:16.04
+
+RUN apt-get install -y dirmngr
 
 # Install Java.
 RUN \

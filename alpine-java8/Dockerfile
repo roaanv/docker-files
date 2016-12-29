@@ -1,4 +1,4 @@
-FROM roaanv/alpine-glibc
+FROM roaanv/alpine-glibc:alpine-3.4
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=112 \
