@@ -1,8 +1,8 @@
 NAME := java8-dev
 DOCKER_HOST ?= unseen:6088/
 DOCKER_USER ?= roaanv/
-TAG ?= :latest
-IMAGE_NAME = $(DOCKER_HOST)$(DOCKER_USER)$(NAME)$(TAG)
+BUILD_TAG ?= :latest
+IMAGE_NAME = $(DOCKER_HOST)$(DOCKER_USER)$(NAME)$(BUILD_TAG)
 CONTAINER_NAME=$(NAME)
 
 all: build
@@ -40,3 +40,5 @@ logs:
 push: image
 	docker push $(IMAGE_NAME)
 
+tag:
+	docker tag $(IMAGE_NAME) $(DOCKER_HOST)$(DOCKER_USER)$(NAME):$(TAG)
