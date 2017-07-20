@@ -41,4 +41,4 @@ push: image
 	docker push $(IMAGE_NAME)
 
 tag:
-	docker tag $(IMAGE_NAME) $(DOCKER_HOST)$(DOCKER_USER)$(NAME):$(TAG)
+	docker tag $(IMAGE_NAME) $(TAG)
